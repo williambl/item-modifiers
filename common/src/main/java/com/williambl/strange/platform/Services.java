@@ -2,12 +2,14 @@ package com.williambl.strange.platform;
 
 import com.williambl.strange.StrangeMod;
 import com.williambl.strange.platform.services.IPlatformHelper;
+import com.williambl.strange.platform.services.IRegistryHelper;
 
 import java.util.ServiceLoader;
 
 public class Services {
 
     public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
+    public static final IRegistryHelper REGISTRY = load(IRegistryHelper.class);
 
     public static <T> T load(Class<T> clazz) {
 
